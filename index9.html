@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scottish Church College</title>
+  <link rel="stylesheet" href="style4.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
+  <style>
+  .notice-board {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    max-width: 90%;
+    background-color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: slide-down 1s ease;
+    z-index: 9999;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    
+  }
+
+  .notice-board-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .notice-board-message {
+    grid-column: 1 / span 2;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .notice-board-link {
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .notice-board-link:hover {
+    color: #007bff;
+  }
+
+  .notice-board-close {
+    font-size: 18px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+    margin-top: 10px;
+  }
+
+  .notice-board-close:hover {
+    color: #007bff;
+  }
+  @keyframes slide-down {
+        0% {
+            top: -100%;
+        }
+        60% {
+            top: 70%;
+        }
+        80% {
+            top: 20%;
+        }
+        100% {
+            top: 50%;
+        }
+    }
+    .notice-board .notice-board-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #f20404;
+    }
+</style>
+
+  
+
+</head>
+
+<body>
+
+    <div class="notice-board" id="noticeBoard">
+        <span class="notice-board-close" onclick="closeNoticeBoard()">&#10006;</span>
+        <span class="notice-board-message"><h2>Notice Board</h2></span>
+        <div class="highlighted-section">
+            <a href="https://www.scottishchurch.ac.in/docs/NAAC/20220822_Assessment_Result_2022.pdf" target="_blank">
+                Scottish Church College is re-accredited with Grade ‘A’ for third cycle by NAAC on 7th June 2022.
+            </a>
+          </div>
+        <div class="notice-board-content">
+          <a href="https://www.scottishchurch.ac.in/noticeUpload/News/attachment_2023-06-19-07-34-51.pdf" class="notice-board-link">19.06.2023: Opportunities for Summer Internship</a>
+          <a href="https://www.scottishchurch.ac.in/noticeUpload/News/attachment_2023-06-02-12-48-11.pdf" target="_blank" class="notice-board-link">02.06.2023: Admission notice 2023-24</a>
+          <a href="https://www.scottishchurch.ac.in/noticeUpload/News/attachment_2023-05-25-12-30-14.pdf" target="_blank" class="notice-board-link">25.05.2023: Call for applicants for TWO PEACE EDUCATION WORKERS</a>
+          <a href="https://www.scottishchurch.ac.in/noticeUpload/News/attachment_2023-05-22-06-00-20.pdf" target="_blank" class="notice-board-link">22.05.2023: Provisional List of Eligible Candidates for Semester VI Examination, 2023 (CBCS): B.SC. BACKLOG</a>
+          <a href="https://www.scottishchurch.ac.in/noticeUpload/News/attachment_2023-05-22-05-59-47.pdf" target="_blank" class="notice-board-link">22.05.2023: Provisional List of Eligible Candidates for Semester VI Examination, 2023 (CBCS): B.A. BACKLOG</a>
+          <a href="https://www.scottishchurch.ac.in/noticeUpload/News/attachment_2023-05-22-05-59-09.pdf" target="_blank" class="notice-board-link">22.05.2023: Provisional List of Eligible Candidates for Semester VI Examination, 2023 (CBCS): B.SC. REGULAR</a>
+          <a href="https://www.scottishchurch.ac.in/noticeUpload/News/attachment_2023-05-22-05-58-33.pdf" target="_blank" class="notice-board-link">22.05.2023: Provisional List of Eligible Candidates for Semester VI Examination, 2023 (CBCS): B.A. REGULAR</a>
+          <img src="notice.jpg" alt="NAAC">
+        </div>
+      </div>
+      
+    <div class="container">
+      <div class="menu-icon" onclick="toggleMenu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+  
+      <div class="menu-content" id="menuContent">
+        <a href="https://www.scottishchurch.ac.in/the-college.php" target="_blank">The College</a>
+        <a href="https://www.scottishchurch.ac.in/vision_mission.php" target="_blank">Vision-Mission</a>
+        <a href="https://www.scottishchurch.ac.in/college-council.php" target="_blank">Administration</a>
+        <a href="https://www.scottishchurch.ac.in/IQAC.php" target="_blank">IQAC</a>
+        <a href="https://www.scottishchurch.ac.in/UG/deptDetail.php" target="_blank">Departments</a>
+        <a href="https://www.scottishchurch.ac.in/TeacherEducation/deptDetail.php" target="_blank">B.Ed.</a>
+        <a href="https://www.scottishchurch.ac.in/admissions.php" target="_blank">Academics</a>
+        <a href="https://www.scottishchurch.ac.in/appointment_circula.php" target="_blank">Mentor Mentee</a>
+        <a href="https://www.scottishchurch.ac.in/college_prospectus.php" target="_blank">Prospectus</a>
+        <a href="https://www.scottishchurch.ac.in/magazine.php" target="_blank">Publications</a>
+        <a href="https://www.scottishchurch.ac.in/anti_ragging.php" target="_blank">Facilities</a>
+        <a href="https://www.scottishchurch.ac.in/achievements-students.php" target="_blank">Achievements</a>
+        <a href="https://www.scottishchurch.ac.in/achievements-students.php" target="_blank">Students' Corner</a>
+        <a href="https://www.scottishchurch.ac.in/library.php" target="_blank">General Library</a>
+        <a href="https://www.scottishchurch.ac.in/notice-board.php" target="_blank">Notifications</a>
+        <a href="https://www.scottishchurch.ac.in/contactus.php" target="_blank">Contact</a>
+      </div>
+  
+      <section id="hero">
+        <img src="https://www.thebigger.com/universities/wp-content/uploads/2011/09/Scottish-Church-College-logo.png" alt="Scottish Church College Logo" class="logo">
+        <p style="color: white;">
+          <br>
+          (A Christian Minority Institution) | Parent Body: Church of North India Estd. 1830 | Affiliated to University of Calcutta
+          NAAC Re-Accredited Grade 'A' Institution (3rd Cycle)
+        </p>
+        <a href="https://www.scottishchurch.ac.in" class="btn" target="_blank">Learn More</a>
+      </section>
+  
+  
+      <div class="highlighted-section">
+        <a href="https://www.nirfindia.org/2023/CollegeRanking.html" target="_blank">
+          Scottish Church College, Kolkata is ranked 100 in NIRF Ranking 2023
+        </a>
+      </div>
+  
+      <br>
+      <br>
+  
+      <div class="slideshow-container">
+        <div class="slide active">
+          <img src="https://www.scottishchurch.ac.in/images/Carousel/20230610.jpg" alt="Slide 1">
+        </div>
+        <div class="slide">
+            <img src="https://www.scottishchurch.ac.in/images/Carousel/20230627_2.jpg" alt="Slide 2">
+          </div>
+        <div class="slide">
+          <img src="https://www.scottishchurch.ac.in/images/Carousel/20230316_Visit_to_Salesian_College_Siliguri_9-11032023.jpg" alt="Slide 2">
+        </div>
+        <div class="slide">
+          <img src="https://www.scottishchurch.ac.in/images/Carousel/20230513.jpg" alt="Slide 3">
+        </div>
+        <div class="slide">
+          <img src="https://www.scottishchurch.ac.in/images/Carousel/20230316_Visit_to_Salesian_College_Siliguri_9-11032023.jpg" alt="Slide 4">
+        </div>
+  
+        <div class="arrow previous" onclick="changeSlide(-1)">&#10094;</div>
+        <div class="arrow next" onclick="changeSlide(1)">&#10095;</div>
+      </div>
+  
+      <section class="links-section">
+        <h2 class="links-heading">Links at a Glance</h2>
+        <div class="links-container">
+            <a href="https://www.scottishchurch.ac.in/principal-speaks.php" class="link-item">
+                <i class="fas fa-user-tie"></i>
+                <span>Principal</span>
+              </a>
+              <a href="https://www.scottishchurch.ac.in/IQAC.php" class="link-item">
+                <i class="fas fa-briefcase"></i>
+                <span>IQAC</span>
+              </a>
+              <a href="https://www.scottishchurch.ac.in/NIRF.php" class="link-item">
+                <i class="fas fa-award"></i>
+                <span>NIRF</span>
+              </a>
+              <a href="https://www.scottishchurch.ac.in/NAAC.php" class="link-item">
+                <i class="fas fa-university"></i>
+                <span>NAAC</span>
+              </a>
+              <a href="https://www.scottishchurch.ac.in/alumni.php" class="link-item">
+                <i class="fas fa-users"></i>
+                <span>Alumni Connect</span>
+              </a>
+              <a href="https://www.scottishchurch.ac.in/MoU_&_Collaborations.php" class="link-item">
+                <i class="fas fa-hands-helping"></i>
+                <span>Collaborations</span>
+              </a>
+          <a href="https://www.scottishadmissions.com/UG2023/index.php" class="link-item">
+            <i class="fas fa-graduation-cap"></i>
+            <span>UG Admission</span>
+          </a>
+          <a href="https://repository-images.githubusercontent.com/279611541/b7e1e580-c611-11ea-9b24-523c65baea0e" class="link-item">
+            <i class="fas fa-book"></i>
+            <span>PG Admission</span>
+          </a>
+          <a href="https://www.scottishadmissions.com/Fee_Collection_UG/retreive.php" class="link-item">
+            <i class="fas fa-credit-card"></i>
+            <span>Fee Payment</span>
+          </a>
+          <a href="https://repository-images.githubusercontent.com/279611541/b7e1e580-c611-11ea-9b24-523c65baea0e" class="link-item">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <span>B.Ed. Admission</span>
+          </a>
+          <a href="http://scottishcms.edu.in" class="link-item">
+            <i class="fas fa-chalkboard"></i>
+            <span>LMS</span>
+          </a>
+          
+          
+          <a href="https://www.scottishchurch.ac.in/AQAR.php" class="link-item">
+            <i class="fas fa-file-alt"></i>
+            <span>AQAR</span>
+          </a>
+          <a href="https://www.scottishchurch.ac.in/SSR.php" class="link-item">
+            <i class="fas fa-file-signature"></i>
+            <span>SSR</span>
+          </a>
+          <a href="https://www.scottishchurch.ac.in/IIQA.php" class="link-item">
+            <i class="fas fa-check-square"></i>
+            <span>IIQA</span>
+          </a>
+          <a href="https://www.scottishchurch.ac.in/notice-board.php" class="link-item">
+            <i class="fas fa-newspaper"></i>
+            <span>Notices</span>
+          </a>
+        </div>
+      </section>
+      <div class="chatbot-container">
+        <div class="chatbot-icon">
+          <a href="http://127.0.0.1:5000">
+            <img src="bot_logo.png" alt="Chatbot Icon" class="bounce">
+          </a>
+        </div>
+        <div class="chatbot-description">
+          <span class="emoji">&#128591;</span>&nbsp;&nbsp;
+        </div>
+      </div>
+    </div>
+  
+    <footer>
+      <div class="footer-text">&copy; 2023 Avishek and Jishnu. All rights reserved.<br><br></div>
+      <br>
+      
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
+  
+    <script>
+      var slides = document.querySelectorAll('.slide');
+      var currentSlide = 0;
+  
+      function showSlide(n) {
+        slides[currentSlide].className = 'slide';
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].className = 'slide active';
+      }
+  
+      function changeSlide(n) {
+        slides[currentSlide].className = 'slide previous';
+        currentSlide = (currentSlide + n + slides.length) % slides.length;
+        slides[currentSlide].className = 'slide active';
+      }
+  
+      setInterval(function () {
+        changeSlide(1);
+      }, 5000);
+  
+      function toggleMenu() {
+      var menuContent = document.getElementById('menuContent');
+      var menuIcon = document.querySelector('.menu-icon');
+
+      menuContent.classList.toggle('show-menu-content');
+      menuIcon.classList.toggle('close-icon');
+    }
+    function closeNoticeBoard() {
+    var noticeBoard = document.getElementById('noticeBoard');
+    noticeBoard.style.display = 'none';
+    }
+    </script>
+  </body>
+
+</html>
